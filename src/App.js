@@ -1,9 +1,11 @@
 import React from 'react'
 import { initializeApp } from "firebase/app";
-import NavBar from './Components/NavBar/NavBar';
 import GetStarted from './Components/GetStarted/GetStarted';
 import LogIn from './Components/LogIn/LogIn';
+import About from './Components/About/About';
 import { Container } from 'postcss';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
 
 const firebaseConfig = {
 	apiKey: "AIzaSyAR8qPnYMhL3qL421hIpCaPs96c1FocNzI",
@@ -20,9 +22,22 @@ initializeApp(firebaseConfig);
 function App() {
 	return (
 		<div  className="bg-gradient-to-r from-indigo-500 box ">
-			<NavBar/>
-			<GetStarted/>
-			{/* <LogIn/> */}
+			<Router>
+				<Switch>
+					<Route path = "/about">
+
+						<About/>
+					</Route>
+
+					
+					<Route path = "/" exact>
+						<GetStarted/>
+					</Route>
+
+
+
+				</Switch>
+			</Router>
 		</div>
 	);
 }
