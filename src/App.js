@@ -5,6 +5,10 @@ import LogIn from './Components/LogIn/LogIn';
 import About from './Components/About/About';
 import { Container } from 'postcss';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Home from './Components/Home/Home';
+import SignIn from './Components/SignIn/SignIn';
+import Contact from './Components/Contact/Contact';
+import DashBoard from './Components/DashBoard/DashBoard';
 
 
 const firebaseConfig = {
@@ -25,19 +29,34 @@ function App() {
 			<Router>
 				<Switch>
 					<Route path = "/about">
-
 						<About/>
+					</Route>
+					<Route path = "/Home">
+						<Home/>
 					</Route>
 
 					
 					<Route path = "/" exact>
 						<GetStarted/>
 					</Route>
-
+					<Route path = "/login" exact>
+						<LogIn/>
+					</Route>
+					<Route path = "/signin" exact>
+						<SignIn/>
+					</Route>
+					<Route path = "/contact" exact>
+						<Contact/>
+					</Route>
+					<Route path = "/dashboard" exact>
+						<DashBoard/>
+					</Route>
+					
 
 
 				</Switch>
 			</Router>
+			
 		</div>
 	);
 }

@@ -1,16 +1,16 @@
-/* This example requires Tailwind CSS v2.0+ */
+
 import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
 import { Link } from 'react-router-dom'
 
 const navigation = [
-  { name: 'Home', href: '', current: true },
-  { name: 'DashBoard', href: '#', current: false },
-  { name: 'Contact', href: '#', current: false },
-  { name: 'About', href: '#', current: false },
-  { name: 'LogIn', href: '#', current: false },
-  { name: 'SignIn', href: '#', current: false },
+  { name: 'Home', href: '/home', current: true },
+  { name: 'DashBoard', href: '/dashboard', current: false },
+  { name: 'Contact', href: '/contact', current: false },
+  { name: 'About', href: '/about', current: false },
+  { name: 'LogIn', href: '/login', current: false },
+  { name: 'SignIn', href: '/signin', current: false },
   
 ]
 
@@ -154,10 +154,9 @@ const NavBar=()=>{
               ))}
             </div>
           </Disclosure.Panel>
-        </>
+          </>
       )}
-    </Disclosure>
-  )
-}
-
+        </Disclosure>
+        
+  )}
 export default NavBar

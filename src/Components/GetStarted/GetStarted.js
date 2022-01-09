@@ -40,13 +40,6 @@ const GetStarted = () => {
           </div>
         </div>
       </main>
-      {/* <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-        <img
-          className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
-          src="https://media.istockphoto.com/vectors/schedule-appointment-planning-clock-and-calendar-with-marked-date-and-vector-id1185278760?s=2048x2048"
-          alt=""
-        />
-      </div> */}
     </div>
   );
 };
