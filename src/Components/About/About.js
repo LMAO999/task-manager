@@ -1,9 +1,10 @@
-import React from "react";
-import NavBar from "../NavBar/NavBar";
+import React from 'react'
 
-const About=()=>{
-    return(
-        <NavBar/>
+const About = () => {
+    return (
+        <div>
+            <h1>Hello, world</h1>
+        </div>
     )
 }
 
